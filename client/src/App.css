@@ -1,0 +1,241 @@
+.header { grid-area: header; }
+.main { grid-area: main; }
+.right { grid-area: right; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main right right'
+    'main main main main right right';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 16px
+}
+
+.backbtn {
+  display: block;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  opacity: 0.9;
+}
+
+body {
+  counter-reset: my-sec-counter;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+#DataTable {
+  position: relative;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+  cursor: cell;
+}
+
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+  table {
+    margin-top: 106px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin: 0 0 1rem 0;
+    overflow: auto;
+    border-bottom: 1px solid #ccc;
+  }
+
+
+
+  tbody tr:before {
+    counter-increment: my-sec-counter;
+    content: "";
+    background-color: #333;
+    display: block;
+    height: 1px;
+  }
+
+
+  tr:nth-child(odd) {
+    background: #ccc;
+  }
+
+  .pagination>li {
+    display: inline-block;
+  }
+}
+
+.top-filters {
+  font-size: 0px;
+}
+
+.search-field {
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.dd-number-of-recoeds {
+  font-size: 12px;
+}
+
+.search-field,
+.dd-number-of-recoeds {
+  display: inline-block;
+  width: 50%;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.logoutbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  opacity: 0.9;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.loginbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.loginbtn:hover {
+  opacity: 1;
+}
+
+.signup {
+  background-color: #f1f1f1;
+  text-align: center;
+}
